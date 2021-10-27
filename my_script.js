@@ -21,10 +21,10 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
-//devo creare dei div che contengano un img e un div con dentro il titolo e il testo per la parte grande 
-//nella parte piccola invece serve solo un div contenente un img
-//quando è presente il primo di un array devono essere presenti tutti gli altri due e se c'è ne sono infiniti dovranno sempre esserci
 
+//scrivere cinque div .item con dentro un img e un div con un h2 e un p => for ()
+    //il loro contenuto deve cambiare in base alla loro posizione nell'array => contenuto[i]
+    //assegnare la classe active 
+//creare cinque div .thumb con dentro un div contenente un img => for 
+    //assegnare la classe active 
 
-//al click dell'utente nella freccia verso il basso
-    //l'immagine attiva diventa visibile a sinistra con i relativi titoli e testo
