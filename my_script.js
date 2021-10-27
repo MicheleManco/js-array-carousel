@@ -28,21 +28,48 @@ const text = [
 //creare cinque div .thumb con dentro un div contenente un img => for 
     //limg deve cambiare in base alla loro posizione array => contenuto[i]
     //assegnare la classe active 
+//quando premo il pulsante next  => addeventlistener
+    // mettere l'active all'elemento dopo e togliere a quello precedente
+        // selezionare l'elemento che ci interessa per togliere l'active
+
+
 
 const contItems = document.getElementById("items");
-const contThumbs = document.getElementById("thumbs")
+const contThumbs = document.getElementById("thumbs");
+let item ="";
+let thumb = "";
+const next = document.getElementById("next")
+const prev = document.getElementById("prev")
+
 
 for (let i = 0; i < items.length; i++){
-    contItems.innerHTML += `
+    item += `
     <div class="item">
         <img src="${items[i]}" alt="${title[i]}">
-        <div class="${text[i]}">
+        <div class="text">
             <h2>${title[i]}</h2>
-            <p>sdoegnsgkng</p>
+            <p>${text[i]}</p>
         </div>
     </div>`;
-    contThumbs.innerHTML += `
+    thumb += `
     <div class="thumb">
         <img src="${items[i]}" alt="">
     </div>`
 }
+contItems.innerHTML = item;
+contThumbs.innerHTML += thumb;
+
+document.getElementsByClassName("item")[0].classList.add("active")
+document.getElementsByClassName("thumb")[0].classList.add("active")
+
+
+let positionActive = 0;
+
+next.addEventListener('click'
+    function(){
+        ++positionActive;
+        document.getElementsByClassName("item")[0].classList.add("active")
+        document.getElementsByClassName("thumb")[0].classList.add("active")
+
+    }
+);
