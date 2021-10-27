@@ -31,6 +31,8 @@ const text = [
 //quando premo il pulsante next  => addeventlistener
     // mettere l'active all'elemento dopo e togliere a quello precedente
         // selezionare l'elemento che ci interessa per togliere l'active
+        //selezionare l'elemento che ci interessa per metterel'active
+    //se l'active è sull'ultimo elemento => if (getelementbyclassname("item").lenght< positionactive){activeposition=0}
 
 
 
@@ -65,11 +67,13 @@ document.getElementsByClassName("thumb")[0].classList.add("active")
 
 let positionActive = 0;
 
-next.addEventListener('click'
+document.getElementById("next").addEventListener('click',
     function(){
         ++positionActive;
-        document.getElementsByClassName("item")[0].classList.add("active")
-        document.getElementsByClassName("thumb")[0].classList.add("active")
-
+        document.getElementsByClassName("item")[positionActive -1].classList.remove("active")
+        document.getElementsByClassName("item")[positionActive].classList.add("active")
+        document.getElementsByClassName("thumb")[positionActive -1].classList.remove("active")
+        document.getElementsByClassName("thumb")[positionActive].classList.add("active")
     }
 );
+
