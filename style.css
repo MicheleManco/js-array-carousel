@@ -30,11 +30,11 @@
     height: 20%;
 }
 
-.item.active{
+#items .active{
 display: block;
 }
 
-.thumb.active{
+#thumbs .active{
     filter: brightness(0.5);
     padding: 5px;
 }

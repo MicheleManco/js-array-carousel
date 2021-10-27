@@ -26,5 +26,23 @@ const text = [
     //il loro contenuto deve cambiare in base alla loro posizione nell'array => contenuto[i]
     //assegnare la classe active 
 //creare cinque div .thumb con dentro un div contenente un img => for 
+    //limg deve cambiare in base alla loro posizione array => contenuto[i]
     //assegnare la classe active 
 
+const contItems = document.getElementById("items");
+const contThumbs = document.getElementById("thumbs")
+
+for (let i = 0; i < items.length; i++){
+    contItems.innerHTML += `
+    <div class="item">
+        <img src="${items[i]}" alt="${title[i]}">
+        <div class="${text[i]}">
+            <h2>${title[i]}</h2>
+            <p>sdoegnsgkng</p>
+        </div>
+    </div>`;
+    contThumbs.innerHTML += `
+    <div class="thumb">
+        <img src="${items[i]}" alt="">
+    </div>`
+}
